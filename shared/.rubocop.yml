@@ -1,0 +1,16 @@
+inherit_from:
+  - .rubocop-todo.yml
+
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'lib/generators/**/*'
+    - 'vendor/**/*'
+  DisplayCopNames: true
+  TargetRubyVersion: <%= RUBY_VERSION %>
+  TargetRailsVersion: >-
+    <%= ENV.inspect %>

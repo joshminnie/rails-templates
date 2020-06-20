@@ -1,0 +1,33 @@
+#! /usr/bin/env ruby
+
+gem 'lodash-rails'
+
+gem_group :development do
+  # Linting
+  gem 'reek', require: false
+  gem 'rubocop', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
+
+  # Documentation
+  gem 'redcarpet', require: false
+  gem 'yard', require: false
+end
+
+gem_group :development, :test do
+  # Data generation
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rb-readline'
+end
+
+gem_group :test do
+  gem 'rspec-rails', require: false
+  gem 'simplecov', require: false
+  gem 'webmock', require: false
+  gem 'shoulda-matchers', require: false
+end
+
+template File.expand_path('shared/.rubocop.yml', __dir__), '.rubocop.yml'
+
+run 'bundle install'
