@@ -1,0 +1,10 @@
+detectors:
+  # Since we use Rubocop with the documentation check, we don't need to have Reek monitor it too.
+  IrresponsibleModule:
+    enabled: false
+
+exclude_paths:
+  - 'bin/{bundle,dev,rails,rake,setup}'
+  - 'db/schema.rb'
+  - 'lib/generators/**/*'
+  - 'vendor/**/*'

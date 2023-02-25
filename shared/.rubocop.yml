@@ -8,6 +8,7 @@ require:
 AllCops:
   NewCops: enable
   Exclude:
+    - 'bin/{bundle,dev,rails,rake,setup}'
     - 'db/schema.rb'
     - 'lib/generators/**/*'
     - 'vendor/**/*'
@@ -23,7 +24,7 @@ Layout/LineLength:
 Style/Documentation:
   Exclude:
     - 'db/migrate/**/*'
-    - 'app/helpers/application_helper.rb'
+    - 'app/**/application_*.rb'
     - 'config/application.rb'
 
 Style/StringLiterals:
