@@ -1,6 +1,8 @@
 gem "lodash-rails"
 gem "view_component"
 gem "dartsass-rails"
+# Normalizer hooks to "clean" model data before saving to the database
+gem "normalizr"
 
 gem_group :development do
   # Linting
@@ -12,6 +14,9 @@ gem_group :development do
   # Documentation
   gem "redcarpet", require: false
   gem "yard", require: false
+
+  # Allows for delivery of emails to a web interface
+  gem "letter_opener_web", require: false
 end
 
 gem_group :development, :test do
